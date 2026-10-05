@@ -1,0 +1,1850 @@
+{
+  "version": 1,
+  "court": {
+    "widthFt": 20,
+    "lengthFt": 44,
+    "netY": 22,
+    "kitchenLines": [
+      15,
+      29
+    ],
+    "note": "y=0 far baseline, y=44 near baseline, x=0 left sideline"
+  },
+  "players": [
+    {
+      "id": "K",
+      "name": "Karl",
+      "color": "p0"
+    },
+    {
+      "id": "R",
+      "name": "Roger",
+      "color": "p1"
+    }
+  ],
+  "categories": [
+    {
+      "id": "warm",
+      "name": "Warm-up"
+    },
+    {
+      "id": "reset",
+      "name": "Resets (Karl)"
+    },
+    {
+      "id": "lob",
+      "name": "Lobs and smashes (Roger)"
+    },
+    {
+      "id": "game",
+      "name": "Scored games"
+    },
+    {
+      "id": "cool",
+      "name": "Cool-down"
+    },
+    {
+      "id": "extra",
+      "name": "Extras"
+    }
+  ],
+  "modes": {
+    "seven11": {
+      "name": "7-Eleven",
+      "sides": [
+        {
+          "role": "Kitchen",
+          "target": 11,
+          "start": 0
+        },
+        {
+          "role": "Baseline",
+          "target": 7,
+          "start": 0
+        }
+      ],
+      "defaultNames": [
+        "Roger",
+        "Karl"
+      ],
+      "lobsToggle": true,
+      "rule": "Rally scoring. Kitchen needs 11, baseline needs 7. Kitchen can hit any legal shot to keep the baseline player back."
+    },
+    "zero9": {
+      "name": "Zero-Nine",
+      "sides": [
+        {
+          "role": "Kitchen",
+          "target": 11,
+          "start": 0
+        },
+        {
+          "role": "Transition",
+          "target": 11,
+          "start": 9
+        }
+      ],
+      "defaultNames": [
+        "Roger",
+        "Karl"
+      ],
+      "rule": "Transition player starts at 9, kitchen at 0. First to 11."
+    },
+    "lob7": {
+      "name": "Lob vs smash",
+      "sides": [
+        {
+          "role": "Smasher",
+          "target": 7,
+          "start": 0
+        },
+        {
+          "role": "Lobber",
+          "target": 7,
+          "start": 0
+        }
+      ],
+      "defaultNames": [
+        "Karl",
+        "Roger"
+      ],
+      "rule": "Lobber scores on a lob that can't be smashed. Smasher scores on a smash winner. First to 7."
+    },
+    "dink5": {
+      "name": "Dink to 5",
+      "sides": [
+        {
+          "role": "Dinker",
+          "target": 5,
+          "start": 0
+        },
+        {
+          "role": "Dinker",
+          "target": 5,
+          "start": 0
+        }
+      ],
+      "defaultNames": [
+        "Roger",
+        "Karl"
+      ],
+      "netReset": true,
+      "rule": "Cross-court dinks, no speed-ups. Hit the net and your score drops to 0."
+    },
+    "call7": {
+      "name": "Call your winner",
+      "sides": [
+        {
+          "role": "Player",
+          "target": 7,
+          "start": 0
+        },
+        {
+          "role": "Player",
+          "target": 7,
+          "start": 0
+        }
+      ],
+      "defaultNames": [
+        "Roger",
+        "Karl"
+      ],
+      "minus": true,
+      "rule": "Say 'winner' before your winning shot. Called and won: +1. Called and lost: -1. First to 7."
+    },
+    "to11": {
+      "name": "Game to 11",
+      "sides": [
+        {
+          "role": "Player",
+          "target": 11,
+          "start": 0
+        },
+        {
+          "role": "Player",
+          "target": 11,
+          "start": 0
+        }
+      ],
+      "defaultNames": [
+        "Roger",
+        "Karl"
+      ],
+      "winBy": 2,
+      "rule": "Skinny singles. 11, win by 2."
+    }
+  },
+  "drills": [
+    {
+      "id": "w1",
+      "cat": "warm",
+      "title": "Dinks and volleys",
+      "mins": 8,
+      "forWho": "Both",
+      "summary": "Easy rally to wake up hands and feet.",
+      "who": {
+        "K": "dinker",
+        "R": "dinker"
+      },
+      "rules": [
+        "Straight-ahead dinks for 3 minutes.",
+        "Cross-court dinks for 3 minutes.",
+        "Finish with soft volleys, both a step off the line."
+      ],
+      "cues": [
+        "Paddle out front, loose grip.",
+        "Bend the knees, not the back.",
+        "Aim deep in the kitchen."
+      ],
+      "videos": [],
+      "diagram": {
+        "players": [
+          {
+            "l": "K",
+            "x": 15,
+            "y": 30.5,
+            "c": 0
+          },
+          {
+            "l": "R",
+            "x": 15,
+            "y": 13.5,
+            "c": 1
+          }
+        ],
+        "paths": [
+          {
+            "t": "shot",
+            "a": [
+              15,
+              30.5
+            ],
+            "b": [
+              15,
+              18
+            ]
+          },
+          {
+            "t": "shot",
+            "a": [
+              15,
+              13.5
+            ],
+            "b": [
+              15,
+              26
+            ]
+          }
+        ],
+        "zones": [
+          [
+            10,
+            15,
+            10,
+            7
+          ],
+          [
+            10,
+            22,
+            10,
+            7
+          ]
+        ]
+      }
+    },
+    {
+      "id": "w2",
+      "cat": "warm",
+      "title": "Dink to 5",
+      "mins": 6,
+      "forWho": "Both",
+      "scoring": "dink5",
+      "summary": "Cross-court dink game. Net ball sends you back to zero.",
+      "who": {
+        "K": "dinker",
+        "R": "dinker"
+      },
+      "rules": [
+        "Cross-court dinks only, no speed-ups.",
+        "Win a rally: +1. First to 5.",
+        "Hit into the net: your score drops to 0."
+      ],
+      "cues": [
+        "Height over the net is safe. The net is the enemy.",
+        "Patience beats pace."
+      ],
+      "videos": [
+        {
+          "label": "Tanner Tomassi: cross-court dink game",
+          "url": "https://www.tiktok.com/@tanner.pickleball/video/7380803598709542174"
+        }
+      ],
+      "diagram": {
+        "players": [
+          {
+            "l": "K",
+            "x": 16,
+            "y": 30.5,
+            "c": 0
+          },
+          {
+            "l": "R",
+            "x": 4,
+            "y": 13.5,
+            "c": 1
+          }
+        ],
+        "paths": [
+          {
+            "t": "shot",
+            "a": [
+              16,
+              30.5
+            ],
+            "b": [
+              5,
+              18
+            ]
+          },
+          {
+            "t": "shot",
+            "a": [
+              4,
+              13.5
+            ],
+            "b": [
+              15,
+              26
+            ]
+          }
+        ],
+        "zones": [
+          [
+            0,
+            15,
+            10,
+            7
+          ],
+          [
+            10,
+            22,
+            10,
+            7
+          ]
+        ]
+      }
+    },
+    {
+      "id": "r1",
+      "cat": "reset",
+      "title": "Reset ladder",
+      "mins": 10,
+      "forWho": "Karl",
+      "summary": "Earn your way to the kitchen one step at a time.",
+      "who": {
+        "K": "resetter",
+        "R": "feeder"
+      },
+      "rules": [
+        "Resetter starts at the baseline, feeder at the kitchen line.",
+        "Feeder hits firm volleys and drives at a fair pace.",
+        "Each reset that lands in the kitchen: take one step forward.",
+        "Pop one up: take one step back.",
+        "Reach the kitchen line, then restart. Swap after about 5 minutes."
+      ],
+      "cues": [
+        "The step is a reward for a good shot, not a race.",
+        "Watch it land, step, then set your feet before the next ball.",
+        "Short backswing. No forward push."
+      ],
+      "videos": [
+        {
+          "label": "The Dink: reset drill for the transition zone",
+          "url": "https://www.thedinkpickleball.com/pickleball-reset-drill-to-master-the-transition-zone/"
+        }
+      ],
+      "diagram": {
+        "players": [
+          {
+            "l": "K",
+            "x": 15,
+            "y": 43,
+            "c": 0
+          },
+          {
+            "l": "R",
+            "x": 15,
+            "y": 13.5,
+            "c": 1
+          }
+        ],
+        "paths": [
+          {
+            "t": "feed",
+            "a": [
+              15,
+              13.5
+            ],
+            "b": [
+              15,
+              41
+            ]
+          },
+          {
+            "t": "shot",
+            "a": [
+              15,
+              43
+            ],
+            "b": [
+              15,
+              18
+            ]
+          },
+          {
+            "t": "feed",
+            "a": [
+              15,
+              13.5
+            ],
+            "b": [
+              15,
+              37
+            ]
+          },
+          {
+            "t": "shot",
+            "a": [
+              15,
+              38
+            ],
+            "b": [
+              15,
+              18
+            ]
+          }
+        ],
+        "moves": [
+          {
+            "who": "K",
+            "pts": [
+              [
+                15,
+                43
+              ],
+              [
+                15,
+                38
+              ],
+              [
+                15,
+                34
+              ],
+              [
+                15,
+                30.5
+              ]
+            ]
+          }
+        ],
+        "zones": [
+          [
+            10,
+            15,
+            10,
+            7
+          ]
+        ]
+      }
+    },
+    {
+      "id": "r2",
+      "cat": "reset",
+      "title": "Below the waist: call it",
+      "mins": 6,
+      "forWho": "Karl",
+      "summary": "Decide reset or attack before you hit. From the Tanner reel you sent.",
+      "who": {
+        "K": "hitter",
+        "R": "feeder"
+      },
+      "rules": [
+        "Feeder mixes low balls (feet, knees) and high balls (above the waist).",
+        "Before contact, say 'reset' or 'attack' out loud.",
+        "Below the waist: reset into the kitchen, then step in.",
+        "Above the waist: attack it.",
+        "+1 for a correct call that lands in. Swap at 3 minutes."
+      ],
+      "cues": [
+        "Split step every time the feeder hits.",
+        "Low ball, soft hands. High ball, finish it."
+      ],
+      "videos": [
+        {
+          "label": "Tanner Tomassi reel (you sent)",
+          "url": "https://www.instagram.com/reel/DeEvGbSuvSt/"
+        }
+      ],
+      "diagram": {
+        "players": [
+          {
+            "l": "K",
+            "x": 15,
+            "y": 37,
+            "c": 0
+          },
+          {
+            "l": "R",
+            "x": 15,
+            "y": 13.5,
+            "c": 1
+          }
+        ],
+        "paths": [
+          {
+            "t": "feed",
+            "a": [
+              15,
+              13.5
+            ],
+            "b": [
+              15,
+              37
+            ]
+          },
+          {
+            "t": "shot",
+            "a": [
+              15,
+              37
+            ],
+            "b": [
+              15,
+              18
+            ]
+          }
+        ],
+        "zones": [
+          [
+            10,
+            15,
+            10,
+            7
+          ]
+        ]
+      }
+    },
+    {
+      "id": "r3",
+      "cat": "reset",
+      "title": "Drive, drop, reset",
+      "mins": 10,
+      "forWho": "Karl",
+      "summary": "Practice the moment you usually forget to reset.",
+      "who": {
+        "K": "baseline",
+        "R": "feeder"
+      },
+      "rules": [
+        "Baseline player hits a drive, then a drop. Feeder volleys back gently.",
+        "After the drop, move into mid court and reset the next ball.",
+        "Shuffle back to the baseline and repeat.",
+        "Game version: the third ball is live. Play to 11, then swap."
+      ],
+      "cues": [
+        "From the baseline, a drive is fine.",
+        "Once you're in mid court, the default is reset.",
+        "Stop and split as the feeder hits."
+      ],
+      "videos": [
+        {
+          "label": "PlayPickleball: drive, drop, reset",
+          "url": "https://www.playpickleball.com/pickleball-drive-drop-reset-drill-game/"
+        }
+      ],
+      "diagram": {
+        "players": [
+          {
+            "l": "K",
+            "x": 15,
+            "y": 43,
+            "c": 0
+          },
+          {
+            "l": "R",
+            "x": 15,
+            "y": 13.5,
+            "c": 1
+          }
+        ],
+        "paths": [
+          {
+            "t": "shot",
+            "a": [
+              15,
+              43
+            ],
+            "b": [
+              15,
+              11
+            ]
+          },
+          {
+            "t": "shot",
+            "a": [
+              15,
+              43
+            ],
+            "b": [
+              15,
+              18
+            ]
+          },
+          {
+            "t": "feed",
+            "a": [
+              15,
+              13.5
+            ],
+            "b": [
+              15,
+              36
+            ]
+          },
+          {
+            "t": "shot",
+            "a": [
+              15,
+              36
+            ],
+            "b": [
+              15,
+              18
+            ]
+          }
+        ],
+        "moves": [
+          {
+            "who": "K",
+            "pts": [
+              [
+                15,
+                43
+              ],
+              [
+                15,
+                43
+              ],
+              [
+                15,
+                36
+              ],
+              [
+                15,
+                36
+              ]
+            ]
+          }
+        ],
+        "zones": [
+          [
+            10,
+            15,
+            10,
+            7
+          ]
+        ]
+      }
+    },
+    {
+      "id": "r4",
+      "cat": "reset",
+      "title": "Speed-up resets",
+      "mins": 8,
+      "forWho": "Karl",
+      "summary": "Absorb hard balls from mid court, then move in.",
+      "who": {
+        "K": "resetter",
+        "R": "attacker"
+      },
+      "rules": [
+        "Resetter stands in mid court.",
+        "Kitchen player speeds the ball up at them.",
+        "Resetter blocks it softly into the kitchen.",
+        "After three good resets in a row, move up and play it out."
+      ],
+      "cues": [
+        "Absorb like a catcher. Paddle near knee height in mid court.",
+        "Move in only after the ball is low. Slow and go."
+      ],
+      "videos": [],
+      "diagram": {
+        "players": [
+          {
+            "l": "K",
+            "x": 15,
+            "y": 36,
+            "c": 0
+          },
+          {
+            "l": "R",
+            "x": 15,
+            "y": 13.5,
+            "c": 1
+          }
+        ],
+        "paths": [
+          {
+            "t": "shot",
+            "a": [
+              15,
+              13.5
+            ],
+            "b": [
+              15,
+              36
+            ]
+          },
+          {
+            "t": "shot",
+            "a": [
+              15,
+              36
+            ],
+            "b": [
+              15,
+              18
+            ]
+          }
+        ],
+        "moves": [
+          {
+            "who": "K",
+            "pts": [
+              [
+                15,
+                36
+              ],
+              [
+                15,
+                36
+              ],
+              [
+                15,
+                30.5
+              ]
+            ]
+          }
+        ],
+        "zones": [
+          [
+            10,
+            15,
+            10,
+            7
+          ]
+        ]
+      }
+    },
+    {
+      "id": "r5",
+      "cat": "reset",
+      "title": "Drive and reset",
+      "mins": 8,
+      "forWho": "Karl",
+      "summary": "Shea Underwood's pattern: drive, then reset your way in.",
+      "who": {
+        "K": "baseline",
+        "R": "kitchen"
+      },
+      "rules": [
+        "Baseline player drives at the kitchen player's paddle-side shoulder.",
+        "Kitchen player mixes deep replies (keep them back) and short ones.",
+        "Keep driving if the reply is strong. Reset when it's low and work forward.",
+        "Restart once you reach the kitchen. Swap."
+      ],
+      "cues": [
+        "Drive with intent, then be ready to go soft.",
+        "Low reply means reset, not another drive."
+      ],
+      "videos": [
+        {
+          "label": "Shea Underwood reel (you sent)",
+          "url": "https://www.instagram.com/reel/DeEypfhRbE8/"
+        },
+        {
+          "label": "Shea Underwood: the third shot you don't consider",
+          "url": "https://sheaunderwood.com/p/road-to-pro-50"
+        }
+      ],
+      "diagram": {
+        "players": [
+          {
+            "l": "K",
+            "x": 15,
+            "y": 43,
+            "c": 0
+          },
+          {
+            "l": "R",
+            "x": 15,
+            "y": 13.5,
+            "c": 1
+          }
+        ],
+        "paths": [
+          {
+            "t": "shot",
+            "a": [
+              15,
+              43
+            ],
+            "b": [
+              16.5,
+              13
+            ]
+          },
+          {
+            "t": "shot",
+            "a": [
+              15,
+              13.5
+            ],
+            "b": [
+              15,
+              40
+            ]
+          },
+          {
+            "t": "shot",
+            "a": [
+              15,
+              41
+            ],
+            "b": [
+              15,
+              18
+            ]
+          }
+        ],
+        "moves": [
+          {
+            "who": "K",
+            "pts": [
+              [
+                15,
+                43
+              ],
+              [
+                15,
+                41
+              ],
+              [
+                15,
+                30.5
+              ]
+            ]
+          }
+        ],
+        "zones": [
+          [
+            10,
+            15,
+            10,
+            7
+          ]
+        ]
+      }
+    },
+    {
+      "id": "l1",
+      "cat": "lob",
+      "title": "Lob depth targets",
+      "mins": 6,
+      "forWho": "Roger",
+      "summary": "Lob over a raised paddle and land it deep.",
+      "who": {
+        "K": "target (paddle up)",
+        "R": "lobber"
+      },
+      "rules": [
+        "Put a towel about 3 feet inside the far baseline, backhand side.",
+        "Partner stands at the kitchen with the paddle held straight up.",
+        "Hit 10 lobs from the baseline, then 10 from the kitchen line.",
+        "Count how many clear the paddle and land near the towel."
+      ],
+      "cues": [
+        "Peak about 10 to 13 feet, just over their reach.",
+        "Lift with the shoulder, not the wrist. Finish high.",
+        "Aim over the backhand shoulder."
+      ],
+      "videos": [
+        {
+          "label": "Selkirk: mastering the lob",
+          "url": "https://www.selkirk.com/blogs/pickleball-education/mastering-the-lob-in-pickleball-a-selkirktv-instructional-video-breakdown"
+        }
+      ],
+      "diagram": {
+        "players": [
+          {
+            "l": "R",
+            "x": 15,
+            "y": 43,
+            "c": 1
+          },
+          {
+            "l": "K",
+            "x": 15,
+            "y": 13.5,
+            "c": 0
+          }
+        ],
+        "paths": [
+          {
+            "t": "lob",
+            "a": [
+              15,
+              43
+            ],
+            "b": [
+              17,
+              2.5
+            ]
+          }
+        ],
+        "zones": [
+          [
+            10,
+            0,
+            10,
+            3
+          ]
+        ]
+      }
+    },
+    {
+      "id": "l2",
+      "cat": "lob",
+      "title": "Lob vs smash",
+      "mins": 10,
+      "forWho": "Roger",
+      "scoring": "lob7",
+      "summary": "Roger's idea. Good lob scores, short lob gets smashed.",
+      "who": {
+        "K": "smasher",
+        "R": "lobber"
+      },
+      "rules": [
+        "Lobber at the baseline, smasher at the kitchen line.",
+        "Smasher feeds a deep ball. Lobber lobs.",
+        "Good lob: smasher turns, chases, and you play it out.",
+        "Short lob: smasher puts it away.",
+        "First to 7, then swap."
+      ],
+      "cues": [
+        "Smash: turn sideways right away and point at the ball.",
+        "Get behind the ball, not under it. Hit it high and out front.",
+        "Angle it rather than crush it.",
+        "Never backpedal facing the net. Turn and shuffle."
+      ],
+      "videos": [
+        {
+          "label": "Tanner Tomassi: overhead smash basics",
+          "url": "https://www.tiktok.com/@tanner.pickleball/video/7322858643349572910"
+        },
+        {
+          "label": "Joanne Russell: bad lob drill (defend the smash)",
+          "url": "https://www.youtube.com/watch?v=rrhDxOpeQIU"
+        }
+      ],
+      "diagram": {
+        "players": [
+          {
+            "l": "R",
+            "x": 15,
+            "y": 43,
+            "c": 1
+          },
+          {
+            "l": "K",
+            "x": 15,
+            "y": 13.5,
+            "c": 0
+          }
+        ],
+        "paths": [
+          {
+            "t": "feed",
+            "a": [
+              15,
+              13.5
+            ],
+            "b": [
+              15,
+              41
+            ]
+          },
+          {
+            "t": "lob",
+            "a": [
+              15,
+              43
+            ],
+            "b": [
+              15,
+              9
+            ]
+          },
+          {
+            "t": "shot",
+            "a": [
+              15,
+              10
+            ],
+            "b": [
+              13,
+              38
+            ]
+          }
+        ],
+        "moves": [
+          {
+            "who": "K",
+            "pts": [
+              [
+                15,
+                13.5
+              ],
+              [
+                15,
+                13.5
+              ],
+              [
+                15,
+                10
+              ],
+              [
+                15,
+                10
+              ]
+            ]
+          }
+        ],
+        "zones": [
+          [
+            10,
+            0,
+            10,
+            3
+          ]
+        ]
+      }
+    },
+    {
+      "id": "l3",
+      "cat": "lob",
+      "title": "Dink and disguise lob",
+      "mins": 8,
+      "forWho": "Roger",
+      "summary": "Lob out of a dink rally when their eyes drop.",
+      "who": {
+        "K": "dinker",
+        "R": "dinker and lobber"
+      },
+      "rules": [
+        "Dink rally at the kitchen.",
+        "Roger may lob when Karl's dink is short and his eyes drop.",
+        "Play it out. A bad lob gets smashed.",
+        "Swap who is allowed to lob every few minutes."
+      ],
+      "cues": [
+        "Start from the same setup as your dink.",
+        "Push with the shoulder, finish high.",
+        "Topspin makes it dip and run away."
+      ],
+      "videos": [],
+      "diagram": {
+        "players": [
+          {
+            "l": "R",
+            "x": 15,
+            "y": 30.5,
+            "c": 1
+          },
+          {
+            "l": "K",
+            "x": 15,
+            "y": 13.5,
+            "c": 0
+          }
+        ],
+        "paths": [
+          {
+            "t": "shot",
+            "a": [
+              15,
+              30.5
+            ],
+            "b": [
+              15,
+              19
+            ]
+          },
+          {
+            "t": "shot",
+            "a": [
+              15,
+              13.5
+            ],
+            "b": [
+              15,
+              25
+            ]
+          },
+          {
+            "t": "lob",
+            "a": [
+              15,
+              30.5
+            ],
+            "b": [
+              17,
+              3
+            ]
+          }
+        ],
+        "moves": [
+          {
+            "who": "K",
+            "pts": [
+              [
+                15,
+                13.5
+              ],
+              [
+                15,
+                13.5
+              ],
+              [
+                16,
+                8
+              ],
+              [
+                17,
+                4
+              ]
+            ]
+          }
+        ],
+        "zones": [
+          [
+            10,
+            0,
+            10,
+            3
+          ]
+        ]
+      }
+    },
+    {
+      "id": "l4",
+      "cat": "lob",
+      "title": "Lob and retreat",
+      "mins": 8,
+      "forWho": "Both",
+      "summary": "Chase the lob, drop it, walk back in. Same skill as Karl's resets.",
+      "who": {
+        "K": "chaser",
+        "R": "lobber"
+      },
+      "rules": [
+        "Dink rally. One player is the lobber for this rally.",
+        "The other turns, chases, lets deep lobs bounce, then hits a drop.",
+        "Both work back to the kitchen and keep playing.",
+        "Alternate who lobs."
+      ],
+      "cues": [
+        "Turn and run. Don't backpedal.",
+        "After the chase, drop, then walk in."
+      ],
+      "videos": [
+        {
+          "label": "PrimeTime Pickleball: how to defend the lob",
+          "url": "https://primetimepickleball.com/how-to-defend-the-lob-what-to-do-when-you-have-to-chase-down-a-lob/"
+        }
+      ],
+      "diagram": {
+        "players": [
+          {
+            "l": "R",
+            "x": 15,
+            "y": 30.5,
+            "c": 1
+          },
+          {
+            "l": "K",
+            "x": 15,
+            "y": 13.5,
+            "c": 0
+          }
+        ],
+        "paths": [
+          {
+            "t": "lob",
+            "a": [
+              15,
+              30.5
+            ],
+            "b": [
+              15,
+              2.5
+            ]
+          },
+          {
+            "t": "shot",
+            "a": [
+              15,
+              1.5
+            ],
+            "b": [
+              15,
+              26
+            ]
+          }
+        ],
+        "moves": [
+          {
+            "who": "K",
+            "pts": [
+              [
+                15,
+                13.5
+              ],
+              [
+                15,
+                1.5
+              ],
+              [
+                15,
+                8
+              ],
+              [
+                15,
+                13.5
+              ]
+            ]
+          }
+        ],
+        "zones": [
+          [
+            10,
+            22,
+            10,
+            7
+          ]
+        ]
+      }
+    },
+    {
+      "id": "l5",
+      "cat": "lob",
+      "title": "Overhead feeds",
+      "mins": 6,
+      "forWho": "Both",
+      "summary": "Cooperative overheads. Form over power.",
+      "who": {
+        "K": "overhead",
+        "R": "feeder"
+      },
+      "rules": [
+        "Feeder lobs from the baseline to land between the kitchen line and three-quarter court.",
+        "Overhead player hits controlled smashes back toward the feeder.",
+        "Swap every 20 balls."
+      ],
+      "cues": [
+        "Turn sideways, point, hit out front.",
+        "Smooth, not hard."
+      ],
+      "videos": [],
+      "diagram": {
+        "players": [
+          {
+            "l": "R",
+            "x": 15,
+            "y": 43,
+            "c": 1
+          },
+          {
+            "l": "K",
+            "x": 15,
+            "y": 16,
+            "c": 0
+          }
+        ],
+        "paths": [
+          {
+            "t": "lob",
+            "a": [
+              15,
+              43
+            ],
+            "b": [
+              15,
+              10
+            ]
+          },
+          {
+            "t": "shot",
+            "a": [
+              15,
+              11
+            ],
+            "b": [
+              15,
+              40
+            ]
+          }
+        ],
+        "moves": [
+          {
+            "who": "K",
+            "pts": [
+              [
+                15,
+                16
+              ],
+              [
+                15,
+                11
+              ],
+              [
+                15,
+                11
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "g1",
+      "cat": "game",
+      "title": "7-Eleven",
+      "mins": 12,
+      "forWho": "Both",
+      "scoring": "seven11",
+      "summary": "Baseline needs 7, kitchen needs 11. Fight your way in.",
+      "who": {
+        "K": "baseline (needs 7)",
+        "R": "kitchen (needs 11)"
+      },
+      "rules": [
+        "Half court. One player at the baseline, one at the kitchen line.",
+        "Kitchen player feeds deep. Baseline player opens with a drop (or drive).",
+        "Rally scoring: every rally is a point.",
+        "Baseline wins at 7. Kitchen wins at 11.",
+        "Kitchen player can hit any legal shot to keep the baseline player back.",
+        "Lobs: decide before the game. Try lobs off first, then on.",
+        "Swap roles every game."
+      ],
+      "cues": [
+        "Baseline: once you're inside the baseline, reset. Below the waist, reset. Above the waist, attack.",
+        "Kitchen: keep them deep, aim at the feet, punish anything that sits up."
+      ],
+      "videos": [
+        {
+          "label": "Tanner: 7/11 drill (the Short you sent)",
+          "url": "https://youtube.com/shorts/2-sQylvmIks"
+        },
+        {
+          "label": "Tanner: how to play 7/11",
+          "url": "https://www.tiktok.com/@tanner.pickleball/video/7369955952180710687"
+        },
+        {
+          "label": "DUPR: why the 7/11 drill works",
+          "url": "https://www.dupr.com/post/this-7-11-pickleball-drill-feels-unfair-but-thats-exactly-why-you-need-it"
+        }
+      ],
+      "diagram": {
+        "players": [
+          {
+            "l": "K",
+            "x": 15,
+            "y": 43.5,
+            "c": 0
+          },
+          {
+            "l": "R",
+            "x": 15,
+            "y": 13.5,
+            "c": 1
+          }
+        ],
+        "paths": [
+          {
+            "t": "feed",
+            "a": [
+              15,
+              13.5
+            ],
+            "b": [
+              15,
+              41
+            ]
+          },
+          {
+            "t": "shot",
+            "a": [
+              15,
+              43.5
+            ],
+            "b": [
+              15,
+              18
+            ]
+          },
+          {
+            "t": "shot",
+            "a": [
+              15,
+              13.5
+            ],
+            "b": [
+              14,
+              37
+            ]
+          },
+          {
+            "t": "shot",
+            "a": [
+              15,
+              37
+            ],
+            "b": [
+              15,
+              19
+            ]
+          }
+        ],
+        "moves": [
+          {
+            "who": "K",
+            "pts": [
+              [
+                15,
+                43.5
+              ],
+              [
+                15,
+                43.5
+              ],
+              [
+                15,
+                37
+              ],
+              [
+                15,
+                37
+              ],
+              [
+                15,
+                30.5
+              ]
+            ]
+          }
+        ],
+        "zones": [
+          [
+            10,
+            15,
+            10,
+            7
+          ]
+        ]
+      }
+    },
+    {
+      "id": "g2",
+      "cat": "game",
+      "title": "Zero-Nine",
+      "mins": 8,
+      "forWho": "Both",
+      "scoring": "zero9",
+      "summary": "Transition player starts at 9. Feels easy until it isn't.",
+      "who": {
+        "K": "transition (starts at 9)",
+        "R": "kitchen (starts at 0)"
+      },
+      "rules": [
+        "Transition player starts mid court with 9 points. Kitchen player starts at 0.",
+        "Kitchen player feeds. Play it out.",
+        "First to 11. Swap roles."
+      ],
+      "cues": [
+        "Transition: two points away means patience, not hero shots."
+      ],
+      "videos": [],
+      "diagram": {
+        "players": [
+          {
+            "l": "K",
+            "x": 15,
+            "y": 36,
+            "c": 0
+          },
+          {
+            "l": "R",
+            "x": 15,
+            "y": 13.5,
+            "c": 1
+          }
+        ],
+        "paths": [
+          {
+            "t": "feed",
+            "a": [
+              15,
+              13.5
+            ],
+            "b": [
+              15,
+              36
+            ]
+          },
+          {
+            "t": "shot",
+            "a": [
+              15,
+              36
+            ],
+            "b": [
+              15,
+              18
+            ]
+          }
+        ],
+        "moves": [
+          {
+            "who": "K",
+            "pts": [
+              [
+                15,
+                36
+              ],
+              [
+                15,
+                36
+              ],
+              [
+                15,
+                30.5
+              ]
+            ]
+          }
+        ],
+        "zones": [
+          [
+            10,
+            15,
+            10,
+            7
+          ]
+        ]
+      }
+    },
+    {
+      "id": "g3",
+      "cat": "game",
+      "title": "Skinny singles",
+      "mins": 10,
+      "forWho": "Both",
+      "scoring": "to11",
+      "summary": "Half-court singles when you just want to play.",
+      "who": {
+        "K": "player",
+        "R": "player"
+      },
+      "rules": [
+        "Half court, normal serve and two-bounce rule.",
+        "Games to 11, win by 2."
+      ],
+      "cues": [
+        "Use what you just drilled."
+      ],
+      "videos": [],
+      "diagram": {
+        "players": [
+          {
+            "l": "K",
+            "x": 15,
+            "y": 43.5,
+            "c": 0
+          },
+          {
+            "l": "R",
+            "x": 15,
+            "y": 0.5,
+            "c": 1
+          }
+        ],
+        "paths": [
+          {
+            "t": "shot",
+            "a": [
+              15,
+              43.5
+            ],
+            "b": [
+              15,
+              3
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "g4",
+      "cat": "game",
+      "title": "Call your winner",
+      "mins": 8,
+      "forWho": "Both",
+      "scoring": "call7",
+      "summary": "Say 'winner' before you go for it. Teaches shot choice.",
+      "who": {
+        "K": "player",
+        "R": "player"
+      },
+      "rules": [
+        "Kitchen vs kitchen, half court.",
+        "Say 'winner' before your winning shot.",
+        "Called and won: +1. Called and lost: -1. Not called: 0.",
+        "First to 7."
+      ],
+      "cues": [
+        "Only call it on balls above the net."
+      ],
+      "videos": [
+        {
+          "label": "PlayPickleball: 2-person drills",
+          "url": "https://www.playpickleball.com/2-person-pickleball-drills/"
+        }
+      ],
+      "diagram": {
+        "players": [
+          {
+            "l": "K",
+            "x": 15,
+            "y": 30.5,
+            "c": 0
+          },
+          {
+            "l": "R",
+            "x": 15,
+            "y": 13.5,
+            "c": 1
+          }
+        ],
+        "paths": [
+          {
+            "t": "shot",
+            "a": [
+              15,
+              30.5
+            ],
+            "b": [
+              15,
+              19
+            ]
+          },
+          {
+            "t": "shot",
+            "a": [
+              15,
+              13.5
+            ],
+            "b": [
+              15,
+              25
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "c1",
+      "cat": "cool",
+      "title": "Cool-down",
+      "mins": 5,
+      "forWho": "Both",
+      "summary": "Easy dinks, stretch, one takeaway each.",
+      "who": {
+        "K": "dinker",
+        "R": "dinker"
+      },
+      "rules": [
+        "Two minutes of easy dinks, no score.",
+        "Stretch calves, hips and shoulders.",
+        "Each say one thing to bring to next time. Add it under Our picks."
+      ],
+      "cues": [],
+      "videos": [],
+      "diagram": {
+        "players": [
+          {
+            "l": "K",
+            "x": 15,
+            "y": 30.5,
+            "c": 0
+          },
+          {
+            "l": "R",
+            "x": 15,
+            "y": 13.5,
+            "c": 1
+          }
+        ],
+        "paths": [
+          {
+            "t": "shot",
+            "a": [
+              15,
+              30.5
+            ],
+            "b": [
+              15,
+              18
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "x1",
+      "cat": "extra",
+      "title": "Backhand roll",
+      "mins": 8,
+      "forWho": "Both",
+      "summary": "The Ben Johns video you sent. Roll the backhand dink.",
+      "who": {
+        "K": "roller",
+        "R": "feeder"
+      },
+      "rules": [
+        "Feeder sends cross-court backhand dinks.",
+        "Roller rolls them out of the air or off the bounce.",
+        "Swap every 20 balls."
+      ],
+      "cues": [
+        "Closed paddle face, low to high.",
+        "Start low, finish high."
+      ],
+      "videos": [
+        {
+          "label": "Ben Johns: backhand roll",
+          "url": "https://youtu.be/pt3HWfs7YCs"
+        }
+      ],
+      "diagram": {
+        "players": [
+          {
+            "l": "K",
+            "x": 5,
+            "y": 30.5,
+            "c": 0
+          },
+          {
+            "l": "R",
+            "x": 15,
+            "y": 13.5,
+            "c": 1
+          }
+        ],
+        "paths": [
+          {
+            "t": "feed",
+            "a": [
+              15,
+              13.5
+            ],
+            "b": [
+              6,
+              26
+            ]
+          },
+          {
+            "t": "shot",
+            "a": [
+              5,
+              30.5
+            ],
+            "b": [
+              14,
+              17
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "x2",
+      "cat": "extra",
+      "title": "Tug-of-war dinks",
+      "mins": 6,
+      "forWho": "Both",
+      "summary": "Both start at 5. Win a rally, you go up and they go down.",
+      "who": {
+        "K": "dinker",
+        "R": "dinker"
+      },
+      "rules": [
+        "Both start at 5.",
+        "Win a rally: you +1, partner -1.",
+        "First to 10 or partner hits 0."
+      ],
+      "cues": [
+        "Reset the ball before you try to win it."
+      ],
+      "videos": [],
+      "diagram": {
+        "players": [
+          {
+            "l": "K",
+            "x": 15,
+            "y": 30.5,
+            "c": 0
+          },
+          {
+            "l": "R",
+            "x": 15,
+            "y": 13.5,
+            "c": 1
+          }
+        ],
+        "paths": [
+          {
+            "t": "shot",
+            "a": [
+              15,
+              30.5
+            ],
+            "b": [
+              15,
+              18
+            ]
+          },
+          {
+            "t": "shot",
+            "a": [
+              15,
+              13.5
+            ],
+            "b": [
+              15,
+              26
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
